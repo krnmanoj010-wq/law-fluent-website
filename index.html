@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Law Fluent Associates | Excellence in Advocacy Across India</title>
+    <meta name="description" content="Law Fluent Associates provides expert legal solutions with integrity and precision. Practising in the Supreme Court of India, Madras High Court, and nationwide.">
+    <meta name="keywords" content="Law Fluent Associates, Advocate Kasiramalingam, Cyber Law, Supreme Court Advocate, Madras High Court, Tiruppur Lawyer, Chennai Lawyer, Legal Excellence">
+    <style>
+        :root {
+            --primary-color: #0d3b66;
+            --accent-color: #c5a059;
+            --text-dark: #2b2d42;
+            --text-light: #f4f5f7;
+            --bg-light: #fafbfc;
+            --bg-white: #ffffff;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--bg-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo img {
+            height: 60px;
+            display: block;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(13, 59, 102, 0.85), rgba(13, 59, 102, 0.95)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1920') no-repeat center center/cover;
+            color: var(--text-light);
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #d1dbe5;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--bg-white);
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #b08d4b;
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            display: block;
+            margin: 0 auto;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            color: #4a5568;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: var(--bg-white);
+            padding: 30px;
+            border-radius: 6px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .feature-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+
+        .leadership-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
+        }
+
+        .leader-card {
+            background: var(--bg-white);
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            padding: 35px;
+            border: 1px solid var(--border-color);
+            flex: 0 1 calc(50% - 15px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .leader-meta {
+            margin-bottom: 20px;
+        }
+
+        .leader-name {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .leader-title {
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .leader-qual {
+            font-size: 0.9rem;
+            color: #718096;
+            font-style: italic;
+        }
+
+        .leader-bio {
+            font-size: 0.98rem;
+            color: #4a5568;
+            margin-bottom: 15px;
+        }
+
+        .leader-interests {
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px dashed var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        .leader-contact {
+            margin-top: 10px;
+            font-weight: bold;
+            color: var(--primary-color);
+            background-color: #f0f4f8;
+            padding: 8px 12px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .associates-section {
+            background-color: var(--bg-white);
+            padding: 60px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+            margin-top: 50px;
+        }
+
+        .associates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .associate-item {
+            padding: 15px;
+            border-left: 3px solid var(--accent-color);
+            background: var(--bg-light);
+            border-radius: 0 4px 4px 0;
+        }
+
+        .associate-name {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .associate-details {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .address-box {
+            background: var(--bg-white);
+            padding: 30px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+        }
+
+        .address-box h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.15rem;
+        }
+
+        .contact-form {
+            background: var(--bg-white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 5px solid var(--accent-color);
+        }
+
+        @media (max-width: 992px) {
+            .leader-card {
+                flex: 0 1 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .about-grid, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.png" alt="Law Fluent Associates Legal Excellence">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#leadership">Our Founders & Leadership</a></li>
+                    <li><a href="#why-choose-us">Why Choose Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Excellence in Advocacy Across India</h1>
+            <p>Delivering expert legal solutions with integrity, precision, and an unwavering commitment to justice.</p>
+            <a href="#contact" class="btn">Schedule a Consultation</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="section-title">
+            <h2>About Us</h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>At Law Fluent Associates, we are dedicated to delivering expert legal solutions with integrity and precision. With strategically located offices in Chennai and Tiruppur, we proudly serve clients across Tamil Nadu, all High Courts in India, and the Supreme Court of India, ensuring unparalleled legal representation.</p>
+                <p>Our team comprises experienced advocates with deep expertise across diverse legal domains, blending innovative strategies, meticulous research, and an unwavering commitment to justice.</p>
+            </div>
+            <div class="feature-card" style="border-top-color: var(--accent-color);">
+                <h3>Our Mission</h3>
+                <p>To uphold the law, safeguard our clients' interests, and deliver impactful legal solutions with professionalism and transparency.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="leadership" style="background-color: #f8fafc; max-width: 100%; padding: 80px max(20px, calc((100% - 1200px)/2));">
+        <div class="section-title">
+            <h2>Our Founders & Leadership</h2>
+        </div>
+        <div class="leadership-container">
+            
+            <div class="leader-card">
+                <div>
+                    <div class="leader-meta">
+                        <div class="leader-name">S. Kasiramalingam</div>
+                        <div class="leader-title">Senior Lawyer</div>
+                        <div class="leader-qual">M.A., B.L.</div>
+                    </div>
+                    <div class="leader-bio">
+                        <p>A distinguished advocate with over four decades of active practice, Senior Lawyer S. Kasiramalingam has established a profound commitment to public interest litigation and writ petitions, shaping important legal precedents and reforms across India.</p>
+                        <p style="margin-top: 10px;">Known for his sharp intellect and unwavering integrity, he has consistently championed causes that safeguard fundamental rights. His arguments have illuminated complex constitutional issues with clarity and precision inside the courtroom, while outside it, he has mentored generations of young lawyers with discipline and fairness.</p>
+                    </div>
+                </div>
+                <div class="leader-interests">
+                    <strong>Practising at:</strong> Madras High Court and the Supreme Court of India.
+                </div>
+            </div>
+
+            <div class="leader-card">
+                <div>
+                    <div class="leader-meta">
+                        <div class="leader-name">A. Vidyasagar</div>
+                        <div class="leader-title">Advocate & Cyber Law Expert</div>
+                        <div class="leader-qual">MS(SE)., LL.B.</div>
+                    </div>
+                    <div class="leader-bio">
+                        <p>An accomplished legal professional specializing in cyber law, information technology, trademark registry, and textile industry regulations, Mr. Vidyasagar brings a forward-thinking, technologically advanced approach to complex legal challenges.</p>
+                        <p style="margin-top: 10px;">He seamlessly integrates technology with law to offer innovative legal solutions, actively representing clients across key commercial and regulatory domains.</p>
+                    </div>
+                </div>
+                <div class="leader-interests">
+                    <strong>Areas of Interest:</strong> Constitutional Matters, Cybercrime, Textile Law, DRT, NCLT, Family Matters, and Consumer Compliance.<br>
+                    <strong>Practising at:</strong> Supreme Court of India, Madras High Court, Karnataka High Court, Bombay High Court, and the District Courts of Tiruppur and Coimbatore.<br>
+                    <strong>Membership:</strong> Member of the Supreme Court Bar Association (SCBA), New Delhi.<br>
+                    <div class="leader-contact">Contact: +91 98430 47662</div>
+                </div>
+            </div>
+
+            <div class="leader-card">
+                <div>
+                    <div class="leader-meta">
+                        <div class="leader-name">D. Navaneethan</div>
+                        <div class="leader-title">Advocate & Strategic Advisor</div>
+                        <div class="leader-qual">M.B.A., LL.B., DLL.</div>
+                    </div>
+                    <div class="leader-bio">
+                        <p>A seasoned practitioner combining comprehensive legal expertise with astute business acumen to deliver strategic, corporate-grade legal solutions. His professionalism, precision, and client-centric approach set him apart as a highly trusted legal advisor.</p>
+                    </div>
+                </div>
+                <div class="leader-interests">
+                    <strong>Areas of Interest:</strong> Civil & Criminal Litigation, Labour Law, NCLT, Family Matters, and Consumer Compliance.<br>
+                    <strong>Practising at:</strong> Supreme Court of India, Madras High Court, Karnataka High Court, Bombay High Court, and the District Courts of Tiruppur, Coimbatore, and Erode.<br>
+                    <strong>Membership:</strong> Member of the Supreme Court Bar Association (SCBA), New Delhi.<br>
+                    <div class="leader-contact">Contact: +91 99527 14313</div>
+                </div>
+            </div>
+
+            <div class="leader-card">
+                <div>
+                    <div class="leader-meta">
+                        <div class="leader-name">M. Sakthivel</div>
+                        <div class="leader-title">Advocate</div>
+                        <div class="leader-qual">B.B.M., LL.M.</div>
+                    </div>
+                    <div class="leader-bio">
+                        <p>With extensive proficiency in handling civil and criminal matters, Mr. Sakthivel adopts a pragmatic, results-driven approach to legal practice. His ability to handle intricate and highly complex cases with complete clarity and determination makes him an indispensable asset to our legal team.</p>
+                    </div>
+                </div>
+                <div class="leader-interests">
+                    <strong>Areas of Interest:</strong> Constitutional Matters, Family Matters, Civil and Criminal Law.<br>
+                    <strong>Practising at:</strong> Supreme Court of India, Madras High Court, Karnataka High Court, Bombay High Court, and the District Courts of Tiruppur and Coimbatore.<br>
+                    <div class="leader-contact">Contact: +91 99521 52777</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="associates-section">
+            <h3 style="color: var(--primary-color); margin-bottom: 25px; font-size: 1.5rem; text-align: center;">Our Network of Associates</h3>
+            <div class="associates-grid">
+               <div class="associate-item">
+                    <div class="associate-name">Dr. Aaditya Gore</div>
+                    <div class="associate-details">New Delhi</div>
+                </div>
+				    <div class="associate-item">
+                    <div class="associate-name">Adv. Kumar Gaurav</div>
+                    <div class="associate-details">B.A., LL.B. — New Delhi</div>
+				</div>
+				 <div class="associate-item">
+                    <div class="associate-name">Adv. Thirumaleshwara Bhat K.S.</div>
+                    <div class="associate-details">B.Com., LL.B., M.B.A (Fin), FChFP., PGDYS, Bengaluru</div>
+                </div>
+                <div class="associate-item">
+                    <div class="associate-name">Adv. Sundeep Kamath</div>
+                    <div class="associate-details">B.Com., LL.B. — Bengaluru & North Karnataka</div>
+                </div>
+                <div class="associate-item">
+                    <div class="associate-name">Adv. D. Ajith Kumar</div>
+                    <div class="associate-details">M.A., M.B.A., LL.B. — Chennai</div>
+                </div>
+                <div class="associate-item">
+                    <div class="associate-name">Adv. K. Sivasubramaniam</div>
+                    <div class="associate-details">M.A., M.Phil., LL.B. — Chennai</div>
+                </div>
+                <div class="associate-item">
+                    <div class="associate-name">Adv. G. Karthika</div>
+                    <div class="associate-details">M.A., LL.M. — Avinashi</div>
+                </div>
+                    <div class="associate-item">
+                    <div class="associate-name">Adv. Lingappan</div>
+                    <div class="associate-details">B.A., LL.B. — Erode</div>
+                </div>
+                <div class="associate-item">
+                    <div class="associate-name">Adv. S. Vijayakumar</div>
+                    <div class="associate-details">B.Com., B.L. — Coimbatore & Annur</div>
+                </div>
+                <div class="associate-item">
+                    <div class="associate-name">Adv. G. Suganya</div>
+                    <div class="associate-details">B.B.A., LL.B. — Tirupur & Bengaluru</div>
+                </div>
+                <div class="associate-item">
+                    <div class="associate-name">Adv. M. Praveenkumar</div>
+                    <div class="associate-details">B.A., LL.B. — Tirupur</div>
+                </div>
+                <div class="associate-item">
+                    <div class="associate-name">Adv. K.R. Sathishkumar</div>
+                    <div class="associate-details">M.E., LL.B. — Salem</div>
+                </div>
+                <div class="associate-item">
+                    <div class="associate-name">Adv. S. Sathyanarayanan</div>
+                    <div class="associate-details">M.C.A., LL.M. — Coimbatore</div>
+                </div>
+                <div class="associate-item">
+                    <div class="associate-name">Adv. Vishnudevan</div>
+                    <div class="associate-details">B.E., B.L. — Tirupur</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-choose-us">
+        <div class="section-title">
+            <h2>Why Choose Law Fluent Associates?</h2>
+        </div>
+        <div class="features">
+            <div class="feature-card">
+                <h3>Nationwide Legal Expertise</h3>
+                <p>Our firm represents clients across all High Courts in India and the Supreme Court of India, ensuring robust advocacy at every level of the judiciary.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Comprehensive Legal Services</h3>
+                <p>Our extensive practice comprehensively covers Public Interest Litigation, Cyber Law, Commercial Law, Corporate Advisory, and Criminal Defense, among other key areas.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Distinguished Leadership</h3>
+                <p>Led by highly accomplished senior advocates with deep domain expertise, we are fully committed to legal excellence and client success.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Strategic Dynamic Reach</h3>
+                <p>With fully operational offices and chambers in Chennai, Tiruppur, and New Delhi, we provide seamless legal support across Tamil Nadu and nationwide.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="section-title">
+            <h2>Connect with Us</h2>
+        </div>
+        <div class="contact-grid">
+            <div>
+                <div class="address-box">
+                    <h3>Tiruppur Office</h3>
+                    <p>#29, 1st Floor, RVE Layout, 3rd Street,<br>Thennampalayam Extn, Tiruppur - 641604</p>
+                </div>
+                <div class="address-box">
+                    <h3>Chennai Chambers</h3>
+                    <p>#208, Addl. Law Chambers,<br>Madras High Court Buildings, Chennai - 600104</p>
+                </div>
+                <div class="address-box">
+                    <h3>Delhi Consultation Room</h3>
+                    <p>Consultation Room No. 4, C. K. Daphtary Chambers Block,<br>Supreme Court of India, Bhagwan Das Road, New Delhi - 110001</p>
+                </div>
+                <div class="address-box" style="border-left-color: var(--accent-color);">
+                    <h3>Email Address</h3>
+                    <p><a href="mailto:lawfluentassociates@gmail.com" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">lawfluentassociates@gmail.com</a></p>
+                </div>
+            </div>
+            <div>
+                <form class="contact-form" onsubmit="sendToWhatsApp(event)">
+                    <h3 style="margin-bottom: 20px; color: var(--primary-color);">Request a Legal Consultation</h3>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required placeholder="your.email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" required placeholder="Your Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Case Summary / Inquiry</label>
+                        <textarea id="message" rows="5" required placeholder="Briefly describe your legal requirement..."></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="border: none; cursor: pointer; width: 100%;">Submit via WhatsApp</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Law Fluent Associates. All Rights Reserved. Excellence in Advocacy.</p>
+    </footer>
+
+    <script>
+        function sendToWhatsApp(event) {
+            event.preventDefault();
+            
+            const whatsappNumber = "919843047662"; 
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+            
+            const text = `*New Legal Consultation Request*%0A%0A` +
+                         `*Name:* ${encodeURIComponent(name)}%0A` +
+                         `*Email:* ${encodeURIComponent(email)}%0A` +
+                         `*Phone:* ${encodeURIComponent(phone)}%0A` +
+                         `*Inquiry Summary:* ${encodeURIComponent(message)}`;
+            
+            const url = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${text}`;
+            window.open(url, '_blank');
+        }
+    </script>
+
+</body>
+</html>
